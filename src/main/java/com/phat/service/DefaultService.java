@@ -8,11 +8,11 @@ public class DefaultService implements IDefaultService{
 
     @Override
     public void run(String text){
-        System.out.println("Invoked run method: "+ text);
+        System.out.println("DefaultService.run( "+ text+ ")");
     }
 
     @Override
     public void defaultMethod() {
-        System.out.println("Invoked default method");
+        System.out.println("DefaultService.defaultMethod()");
     }
 }

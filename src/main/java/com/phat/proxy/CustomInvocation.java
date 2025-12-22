@@ -13,6 +13,7 @@ public class CustomInvocation implements InvocationHandler, net.sf.cglib.proxy.I
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("The actual implementation class: " + proxy.getClass());
+        System.out.println("Invoke " + service.getClass().getName() + "." + method.getName() + "()");
         // we can customize the logic if the method name like something then do something else.
         return method.invoke(service, args);
     }
